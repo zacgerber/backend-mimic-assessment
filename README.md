@@ -1,7 +1,7 @@
 # Mimic 
-Build a "mimic" dict that maps each word that appears in the alice.txt file to a list of all the words that immediately follow that word in the file. The list of words can be be in any order and should include duplicates. So for example the key "and" might have the list ["then", "best", "then", "after", ...] listing all the words which came after "and" in the text.
+Build a "mimic" dict that maps each word that appears in the [alice.txt](./alice.txt) file to a list of all the words that immediately follow that word in the file. The list of words can be be in any order and should include duplicates. For example, the key `"and"` might have the list `["then", "best", "then", "after", ...]` listing all the words which came after "and" in the entire text.
 
-For development, use the short `imdev.txt` file.  When your python mimic dictionary is created from this file, it should look like this if you print it out:
+For development, use the short [imdev.txt](./imdev.txt) file.  When your mimic dictionary is created from this file, it should look like this when printed:
 ```python
 {
     '' : ['I']
@@ -16,11 +16,11 @@ For development, use the short `imdev.txt` file.  When your python mimic diction
     'software' : ['developer,']
 }
 ```
-Notice that the first entry in the dicttionary above is the empty string `""`.  Since we are creating a dictionary of 'next' word lists, it implies that there exists a previous word key for each next-list value.  This of course is true, except in the case of the first entry of the dictionary. Use the empty string as a seed for the first entry in the dictionary.
+Notice that the first entry in the dicttionary above is the empty string `""`.  Since we are creating a dictionary of "next word" lists, it implies that there exists a previous word key for each next-list value.  This, of course, is true except in the case of the first entry of the dictionary. Use the empty string as a seed for the first entry.
 
 With the mimic dict, it's fairly easy to emit random text that mimics the original. Print a word, then look up what words might come next and pick one at random as the next word.
 
-For fun, feed your program to itself as input.
+For fun, feed your program to itself as input. `$ python mimic.py mimic.py`
 
 # Sample Output, using alice.txt as input
 ```
@@ -28,11 +28,11 @@ Alice's shoulder, and seemed to the same order,' continued the hall; but, after 
 ```
 
 
-## PR (Pull Request) Workflow for this Assignment
-1. *Fork* this repository into your own personal github account.
-2. Then *Clone* your own repo to your local development machine.
-3. Create a separate branch named `dev`, and checkout the branch.
-5. Commit your changes, then `git push` the branch back to your own github account.
-5. From your own Github repo, create a pull request (PR) from your `dev` branch back to your own master.
+## PR (Pull Request) Workflow for this assignment
+1. *Fork* this repository into your own personal GitHub account.
+2. *Clone* your own repo to your local development machine.
+3. Create a separate branch named `dev` and checkout the branch.
+5. Commit your changes, then `git push` the branch back to your own GitHub account.
+5. From your own GitHub repo, create a pull request (PR) *from your `dev` branch back to **your own** master*.
 6. Copy/Paste the URL **link to your PR** as your assignment submission.
-7. Your grader will post code review comments inline with your code, in your github account. Be sure to respond to any comments and make requested changes. **RESUBMIT** a new link to your PR after making changes.  This is the code review iteration cycle.
+7. Your grader will post code review comments inline within your pull request in your GitHub account. Be sure to respond to any comments and make requested changes. **RESUBMIT** a new link to your PR after making changes. This is the code review iteration cycle.
